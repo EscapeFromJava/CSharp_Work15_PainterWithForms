@@ -37,6 +37,9 @@ namespace CSharp_Work15_PainterWithForms
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.buttonLoadFile = new System.Windows.Forms.Button();
+            this.labelSquareSize = new System.Windows.Forms.Label();
+            this.textBoxSquare = new System.Windows.Forms.TextBox();
+            this.buttonEnterSquareSize = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +56,7 @@ namespace CSharp_Work15_PainterWithForms
             // 
             this.ClearButton.Location = new System.Drawing.Point(576, 628);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(185, 23);
+            this.ClearButton.Size = new System.Drawing.Size(183, 23);
             this.ClearButton.TabIndex = 6;
             this.ClearButton.Text = "Очистить";
             this.ClearButton.UseVisualStyleBackColor = true;
@@ -90,7 +93,7 @@ namespace CSharp_Work15_PainterWithForms
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(93, 534);
+            this.radioButton1.Location = new System.Drawing.Point(88, 536);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(79, 19);
             this.radioButton1.TabIndex = 1;
@@ -101,7 +104,7 @@ namespace CSharp_Work15_PainterWithForms
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(93, 559);
+            this.radioButton2.Location = new System.Drawing.Point(88, 561);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(79, 19);
             this.radioButton2.TabIndex = 2;
@@ -119,11 +122,40 @@ namespace CSharp_Work15_PainterWithForms
             this.buttonLoadFile.UseVisualStyleBackColor = true;
             this.buttonLoadFile.Click += new System.EventHandler(this.buttonLoadFile_Click);
             // 
+            // labelSquareSize
+            // 
+            this.labelSquareSize.AutoSize = true;
+            this.labelSquareSize.Location = new System.Drawing.Point(576, 536);
+            this.labelSquareSize.Name = "labelSquareSize";
+            this.labelSquareSize.Size = new System.Drawing.Size(110, 15);
+            this.labelSquareSize.TabIndex = 15;
+            this.labelSquareSize.Text = "Размер ячейки:  50";
+            // 
+            // textBoxSquare
+            // 
+            this.textBoxSquare.Location = new System.Drawing.Point(576, 560);
+            this.textBoxSquare.Name = "textBoxSquare";
+            this.textBoxSquare.Size = new System.Drawing.Size(38, 23);
+            this.textBoxSquare.TabIndex = 16;
+            // 
+            // buttonEnterSquareSize
+            // 
+            this.buttonEnterSquareSize.Location = new System.Drawing.Point(620, 561);
+            this.buttonEnterSquareSize.Name = "buttonEnterSquareSize";
+            this.buttonEnterSquareSize.Size = new System.Drawing.Size(139, 23);
+            this.buttonEnterSquareSize.TabIndex = 17;
+            this.buttonEnterSquareSize.Text = "Установить";
+            this.buttonEnterSquareSize.UseVisualStyleBackColor = true;
+            this.buttonEnterSquareSize.Click += new System.EventHandler(this.buttonEnterSquareSize_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 675);
+            this.Controls.Add(this.buttonEnterSquareSize);
+            this.Controls.Add(this.textBoxSquare);
+            this.Controls.Add(this.labelSquareSize);
             this.Controls.Add(this.buttonLoadFile);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -149,6 +181,9 @@ namespace CSharp_Work15_PainterWithForms
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button buttonLoadFile;
+        private System.Windows.Forms.Label labelSquareSize;
+        private System.Windows.Forms.TextBox textBoxSquare;
+        private System.Windows.Forms.Button buttonEnterSquareSize;
     }
 }
 

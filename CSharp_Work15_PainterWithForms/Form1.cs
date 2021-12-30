@@ -9,6 +9,7 @@ namespace CSharp_Work15_PainterWithForms
         private static int _size1;
         private static int _size2;
         private static string _ss;
+        private static int _sizeSquare = 50;
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace CSharp_Work15_PainterWithForms
             {
                 for (int j = 0; j < _size2; j++)
                 {
-                    g.DrawRectangle(p, i * 50, j * 50, 50, 50);
+                    g.DrawRectangle(p, i * _sizeSquare, j * _sizeSquare, _sizeSquare, _sizeSquare);
                 }
             }
         }
@@ -75,7 +76,7 @@ namespace CSharp_Work15_PainterWithForms
                 var y1 = newWords[value + 1];
                 var x2 = newWords[value + 2];
                 var y2 = newWords[value + 3];
-                DrawRectangles(x1 * 50, y1 * 50, (x2 - x1) * 50, (y2 - y1) * 50);
+                DrawRectangles(x1 * _sizeSquare, y1 * _sizeSquare, (x2 - x1) * _sizeSquare, (y2 - y1) * _sizeSquare);
                 for (int j = x1; j < x2; j++)
                 {
                     for (int k = y1; k < y2; k++)
@@ -157,6 +158,10 @@ namespace CSharp_Work15_PainterWithForms
             Cleaning();
         }
 
-
+        private void buttonEnterSquareSize_Click(object sender, EventArgs e)
+        {
+            _sizeSquare = Convert.ToInt32(textBoxSquare.Text);
+            labelSquareSize.Text = "Размер ячейки: " + _sizeSquare;
+        }
     }
 }
